@@ -7,18 +7,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 
-gem 'dotenv-rails'
-gem 'unicorn' # アプリケーションサーバのunicorn
-group :development, :test do
-  gem 'capistrano', '3.16.0' # capistranoのツール一式
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'capistrano3-unicorn'
-  gem 'ed25519'
-  gem 'bcrypt_pbkdf'
-  # 以下省略
-end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
@@ -45,9 +33,18 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'dotenv-rails'
+gem 'unicorn' # アプリケーションサーバのunicorn
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capistrano', '3.16.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
 end
 
 group :development do
