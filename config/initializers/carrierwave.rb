@@ -14,10 +14,10 @@ CarrierWave.configure do |config|
   }
   config.fog_public     = true
   config.fog_attributes = {'Cache-Control' => 'public, max-age=86400'}
-  config.fog_directory = 'aws1-production'
   # case Rails.env
   #   when 'production'
-  #     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/aws1-production'
+      config.fog_directory = 'aws1-production'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/aws1-production'
   #   when 'development'
   #     config.fog_directory = 'aws1-development'
   #     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/aws1-development'
