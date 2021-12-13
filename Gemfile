@@ -6,6 +6,7 @@ ruby '3.0.1'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
+gem 'aws-sdk-s3'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
