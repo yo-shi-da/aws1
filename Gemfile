@@ -5,6 +5,20 @@ ruby '3.0.1'
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
+
+gem 'dotenv-rails'
+gem 'unicorn' # アプリケーションサーバのunicorn
+group :development, :test do
+  gem 'capistrano', '3.16.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
+  # 以下省略
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
