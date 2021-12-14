@@ -2,7 +2,7 @@ CarrierWave.configure do |config|
   require 'carrierwave/storage/abstract'
   require 'carrierwave/storage/file'
   require 'carrierwave/storage/fog'
-  
+
   config.storage :fog
   config.fog_provider = 'fog/aws'
   config.fog_credentials = {
@@ -16,8 +16,8 @@ CarrierWave.configure do |config|
   config.fog_attributes = {'Cache-Control' => 'public, max-age=86400'}
   case Rails.env
     when 'production'
-      config.fog_directory = 'aws1-production'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/aws1-production'
+      config.fog_directory = 'aws-image-app'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/aws-image-app'
     when 'development'
       config.fog_directory = 'aws1-development'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/aws1-development'
